@@ -1,0 +1,219 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+:root {
+  --Tomato: hsl(4, 100%, 67%);
+  --darkGrey: hsl(234, 29%, 20%);
+  --charcoalGrey: hsl(235, 18%, 26%);
+  --grey: hsl(231, 7%, 60%);
+  --white: hsl(0, 0%, 100%);
+}
+body {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+.image-section {
+  height: 295px;
+  background-image: url("./assets/images/illustration-sign-up-mobile.svg");
+  background-size: cover;
+  border-bottom-right-radius: 20px;
+}
+
+.signup-section {
+  padding-left: 1.5rem;
+}
+
+h1 {
+  font-weight: 800;
+  font-size: 2.5rem;
+  line-height: 1;
+}
+p {
+  line-height: 1.5;
+}
+ul {
+  padding-left: 1.5rem;
+}
+li {
+  list-style: none;
+  position: relative;
+  padding-right: 1.5rem;
+  padding-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+li::before {
+  content: url("./assets/images/icon-list.svg");
+  position: absolute;
+  left: -2rem;
+  top: -0.9rem;
+  font-size: 2rem;
+}
+
+label {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 800;
+  padding-bottom: 0.5rem;
+}
+
+.error {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  font-size: 0.7rem;
+  font-weight: 800;
+  width: calc(85% - 10%);
+  text-align: end;
+  color: var(--Tomato);
+  display: none;
+}
+
+input {
+  width: 84%;
+  border-radius: 10px;
+  padding: 1rem;
+  border: 1px solid var(--grey);
+  margin-bottom: 1.2rem;
+  text-indent: 1rem;
+  cursor: pointer;
+}
+input:focus {
+  border: 2px solid var(--charcoalGrey);
+  outline: 0;
+}
+button {
+  width: 95%;
+  border-radius: 10px;
+  padding: 1rem;
+  border: 1px solid #000;
+  margin-bottom: 2rem;
+  background-color: var(--darkGrey);
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--Tomato);
+  border: none;
+  box-shadow: 0px 9px 11px var(--Tomato);
+}
+
+span {
+  font-weight: 600;
+}
+
+.subscribe {
+  padding-left: 1.5rem;
+}
+.sub-heading {
+  margin-bottom: 4.4rem;
+}
+.sub-heading h1 {
+  padding-top: 1rem;
+}
+.sub-heading p {
+  padding-bottom: 1rem;
+  padding-right: 1.5rem;
+}
+img {
+  width: 4rem;
+}
+.subscribe button {
+  position: relative;
+  top: 9rem;
+  width: 91%;
+}
+
+.secret {
+  display: none !important;
+}
+.showing {
+  display: inline-block;
+}
+
+@media (min-width: 600px) {
+  body {
+    justify-content: center;
+    background-color: var(--charcoalGrey);
+  }
+  .container {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 500px 400px;
+    gap: 50px;
+    padding: 2rem;
+    background-color: var(--white);
+    border-radius: 30px;
+  }
+  .image-section {
+    background-image: url("./assets/images/illustration-sign-up-desktop.svg");
+    height: 590px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    grid-row: 1/ 3;
+    grid-column: 2 / 3;
+  }
+
+  .signup-section {
+    grid-row: 1/3;
+    grid-column: 1/2;
+  }
+
+  h1 {
+    font-size: 40px;
+    align-items: center;
+  }
+  p {
+    font-size: 1.2rem;
+    padding-right: 2rem;
+  }
+  li {
+    font-size: 1.2rem;
+  }
+
+  label {
+    font-size: 1rem;
+    padding-bottom: 1rem;
+  }
+  .error {
+    width: calc(80% - 10%);
+  }
+  input {
+    font-size: 1.2rem;
+  }
+  button {
+    font-size: 1.2rem;
+    width: 91%;
+    padding: 1.5rem;
+  }
+
+  .subscribe {
+    background-color: var(--white);
+    width: 500px;
+    height: 600px;
+    border-radius: 50px;
+    padding-left: 4rem;
+  }
+  img {
+    width: 5rem;
+    padding-top: 3rem;
+  }
+
+  .sub-heading h1 {
+    padding-top: 0;
+    margin-bottom: 1.5rem;
+  }
+  .sub-heading p {
+    padding-top: 0;
+    padding-right: 4rem;
+  }
+
+  .subscribe button {
+    top: 0;
+    width: 86%;
+  }
+}
